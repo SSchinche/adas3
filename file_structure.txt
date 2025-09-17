@@ -1,0 +1,33 @@
+ADAS_Project/
+│
+├── data/                         # Raw + processed dataset
+│   ├── images/
+│   │   ├── train/
+│   │   ├── val/
+│   │   └── test/
+│   └── labels/
+│       ├── train/
+│       ├── val/
+│       └── test/
+│
+├── models/                       # Trained weights & configs
+│   ├── yolov5/                   # For object & traffic sign detection
+│   ├── lane_detection/           # (If you save OpenCV pipeline configs)
+│   └── driver_monitoring/
+│
+├── scripts/                      # Core project scripts
+│   ├── train_model.py            # Training pipeline (YOLOv5)
+│   ├── evaluate_model.py         # Evaluate model performance
+│   ├── detect_objects.py         # Run inference with trained model
+│   ├── lane_detection.py         # Lane detection (OpenCV)
+│   ├── driver_monitoring.py      # Drowsiness detection (Dlib)
+│   └── integrate_system.py       # Final ADAS prototype pipeline
+│
+├── utils/                        # Helper functions
+│   ├── dataset_utils.py          # Split/prepare dataset
+│   ├── augmentation.py           # Data augmentation functions
+│   └── visualization.py          # Plot training curves, results
+│
+├── requirements.txt              # Python dependencies
+├── data.yaml                     # YOLOv5 dataset config
+└── README.md                     # Documentation
